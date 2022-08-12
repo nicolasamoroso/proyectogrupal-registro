@@ -29,7 +29,7 @@ function check() {
     const terminos = document.getElementById("terminos").checked;
 
 
-    if (!contra1 || !contra2 || !email|| !nombre || !apellido || !terminos || contra1 !== contra2 || contra1.lenght < 6){
+    if (!nombre || !apellido || !email|| !contra1 || !contra2 || !terminos || contra1 !== contra2 || contra1.length < 6){
         showAlertError();
     }else{
         showAlertSuccess();
@@ -37,3 +37,11 @@ function check() {
 
 
 }
+
+const noValido = / /;
+    if (!nombre  || !apellido || !email || !contra1 || !contra2  || !terminos 
+        || contra1 !== contra2 
+        || contra1.length < 6
+        || noValido.test(contra1) || noValido.test(contra2)){
+        showAlertError();
+    }
