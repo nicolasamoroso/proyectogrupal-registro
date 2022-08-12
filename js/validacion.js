@@ -6,13 +6,23 @@ function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 
-function check {
+function removeAlertError() {
+    document.getElementById("alert-danger").classList.remove("show");
+}
+
+function removeAlertSuccess() {
+    document.getElementById("alert-success").classList.remove("show");
+}
+
+function check() {
     
-    let contra = getElementById(password1).value
+    let contra1 = getElementById(password1).value
 
     let contra2 = getElementById(password2).value
 
-    if (contra === contra2 )
+    if (contra1 !== contra2) {
+        showAlertError();
+    }
 
-    
+
 }
