@@ -28,13 +28,6 @@ function check() {
     const apellido = document.getElementById('nombre').value
     const terminos = document.getElementById("terminos").checked;
 
-
-    if (!nombre || !apellido || !email|| !contra1 || !contra2 || !terminos || contra1 !== contra2 || contra1.length < 6){
-        showAlertError();
-    }else{
-        showAlertSuccess();
-    }
-
     const noValido = / /;
     if (!nombre  || !apellido || !email || !contra1 || !contra2  || !terminos 
         || contra1 !== contra2 
