@@ -20,9 +20,8 @@ function check() {
 
     let contra2 = getElementById(password2).value
 
-    if (contra1 !== contra2) {
+    if (contra1 !== contra2 && contra1.lenght < 6 ) {
         showAlertError();
     }
-
 
 }
