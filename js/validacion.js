@@ -35,13 +35,13 @@ function check() {
         showAlertSuccess();
     }
 
-
-}
-
-const noValido = / /;
+    const noValido = / /;
     if (!nombre  || !apellido || !email || !contra1 || !contra2  || !terminos 
         || contra1 !== contra2 
         || contra1.length < 6
         || noValido.test(contra1) || noValido.test(contra2)){
         showAlertError();
     }
+
+
+}
