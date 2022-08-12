@@ -1,9 +1,15 @@
 function showAlertSuccess() {
+    if (document.getElementById("alert-danger").classList.contains("show"))
+        removeAlertError();
     document.getElementById("alert-success").classList.add("show");
+    setTimeout(removeAlertSuccess, 5000);
 }
 
 function showAlertError() {
+    if (document.getElementById("alert-success").classList.contains("show"))
+        removeAlertSuccess();
     document.getElementById("alert-danger").classList.add("show");
+    setTimeout(removeAlertError, 5000);
 }
 
 function removeAlertError() {
@@ -22,23 +28,12 @@ function check() {
     const apellido = document.getElementById('nombre').value
     const terminos = document.getElementById("terminos").checked;
 
-<<<<<<< HEAD
-    if (!contra1 || !contra2 || !email|| !nombre || !apellido || contra1 !== contra2 || contra1.lenght < 6){
-        showAlertError();
-    }
 
-    else {
-
-        showAlertSuccess()
-
-    }
-=======
     if (!contra1 || !contra2 || !email|| !nombre || !apellido || !terminos || contra1 !== contra2 || contra1.lenght < 6){
-
-
-    if (contra1 !== contra2 && contra1.lenght < 6 ) {
         showAlertError();
+    }else{
+        showAlertSuccess();
     }
 
->>>>>>> 8a72e268ffed214e74a2694f0d1b63c0ac98ada8
+
 }
