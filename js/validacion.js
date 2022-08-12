@@ -27,7 +27,13 @@ function check() {
     const nombre = document.getElementById('nombre').value
     const apellido = document.getElementById('nombre').value
 
-    if (!contra1 || !contra2 || !email|| !nombre || apellido || contra1 !== contra2 || contra1.lenght < 6){
+    if (!contra1 || !contra2 || !email|| !nombre || !apellido || contra1 !== contra2 || contra1.lenght < 6){
         showAlertError();
+    }
+
+    else {
+
+        showAlertSuccess()
+
     }
 }
