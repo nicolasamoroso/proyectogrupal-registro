@@ -34,6 +34,8 @@ function check() {
         || contra1.length < 6
         || noValido.test(contra1) || noValido.test(contra2)){
         showAlertError();
+    }else{
+        showAlertSuccess();
     }
 
 
