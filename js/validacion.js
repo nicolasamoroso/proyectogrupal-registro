@@ -30,5 +30,7 @@ function check() {
 
     if (!contra1 || !contra2 || !email|| !nombre || !apellido || !terminos || contra1 !== contra2 || contra1.lenght < 6){
         showAlertError();
+    }else{
+        showAlertSuccess();
     }
 }
