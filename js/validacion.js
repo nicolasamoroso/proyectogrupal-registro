@@ -25,3 +25,7 @@ function check() {
     }
 
 }
+
+function checkbox(){
+    const terminos = document.getElementById("terminos").checked;
+}
