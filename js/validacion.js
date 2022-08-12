@@ -1,15 +1,9 @@
 function showAlertSuccess() {
-    if (document.getElementById("alert-danger").classList.contains("show"))
-        removeAlertError();
     document.getElementById("alert-success").classList.add("show");
-    setTimeout(removeAlertSuccess, 5000);
 }
 
 function showAlertError() {
-    if (document.getElementById("alert-success").classList.contains("show"))
-        removeAlertSuccess();
     document.getElementById("alert-danger").classList.add("show");
-    setTimeout(removeAlertError, 5000);
 }
 
 function removeAlertError() {
@@ -29,6 +23,10 @@ function check() {
     const terminos = document.getElementById("terminos").checked;
 
     if (!contra1 || !contra2 || !email|| !nombre || !apellido || !terminos || contra1 !== contra2 || contra1.lenght < 6){
+
+
+    if (contra1 !== contra2 && contra1.lenght < 6 ) {
         showAlertError();
     }
+
 }
