@@ -61,6 +61,12 @@ function check() {
     }
     else if (noValido.test(contra1) || noValido.test(contra2))
         showAlertWarning();
-    else
+    else {
         showAlertSuccess();
+        setTimeout(ir, 2000);
+    }
+}
+
+function ir() {
+    window.location.href = "index.html"
 }
